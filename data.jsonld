@@ -1,0 +1,40 @@
+{
+"@context": {
+     "@vocab": "http://w3id.org/nfdi4ing/metadata4ing#",
+    "foaf" : "http://xmlns.com/foaf/0.1/",
+    "prov" : "http://www.w3.org/ns/prov#",
+    "schema" : "https://schema.org/",
+    "owl" : "http://www.w3.org/2002/07/owl#",
+    "rdf" : "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+    "rdfs" : "http://www.w3.org/2000/01/rdf-schema#",
+    "xsd" : "http://www.w3.org/2001/XMLSchema#",
+    "xml" : "http://www.w3.org/XML/1998/namespace",
+    "m4i" : "http://w3id.org/nfdi4ing/metadata4ing#",
+    "local": "https://github.com/izus-fokus/workSamples",
+    "label" : {"@id" : "rdfs:label"},
+    "processing step" : {"@id" : "m4i:ProcessingStep"},
+    "person" : {"@id" : "prov:Person"},
+    "has participant" : {"@id" : "obo:RO_0000057"},
+    "investigates" : {"@id" : "m4i:investigates"},
+    "investigates property" : {"@id" : "m4i:investigatesProperty"},
+    "realizes method" : {"@id" : "m4i:realizesMethod"},
+    "has ORCID ID" : {"@id" : "m4i:orcidId"}
+},
+    "@graph": [
+        {
+            "@type": "processing step",
+            "@id": "local:cfd_sim",
+            "realizes method" : {
+                "@type": "method",
+                "label" : "CFD simulation"
+            },
+            "investigates": {
+                "label": "flow in canal"
+            },
+            "has participant": {
+                "foaf:name" : "Test, Joanne",
+                "has ORCID ID" : "0021-2321-2342-2321"
+            }
+        }
+    ]
+}
